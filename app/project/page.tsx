@@ -1,99 +1,51 @@
-'use client'
+import fs from "node:fs";
+import path from "node:path";
+import ProjectGallery, { ProjectMedia } from "@/components/project/ProjectGallery";
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+function getProjectMedia(): { images: ProjectMedia[]; videos: ProjectMedia[] } {
+  const publicDir = path.join(process.cwd(), "public");
+  const files = fs.readdirSync(publicDir);
 
-const projects = [
-  {
-    title: "House Architecture Design in Los Angeles, CA",
-    date: "20 Oct 2020",
-    location: "Los Angeles",
-    service: "Architecture",
-    img: "/img2.png",
-  },
-  {
-    title: "Modern Villa Project in California",
-    date: "15 Jun 2021",
-    location: "California",
-    service: "Interior Design",
-    img: "/img3.png",
-  },
-  {
-    title: "Luxury Residence Design in New York",
-    date: "10 Feb 2022",
-    location: "New York",
-    service: "Architecture",
-    img: "/img4.png",
-  },
-]
+  const toMedia = (name: string, type: ProjectMedia["type"]): ProjectMedia => ({
+    name,
+    type,
+    src: `/${name}`,
+  });
+
+  return {
+    images: files
+      .filter((name) => name.startsWith("WhatsApp Image") && /\.(jpe?g|png|webp)$/i.test(name))
+      .sort((a, b) => a.localeCompare(b))
+      .map((name) => toMedia(name, "image")),
+    videos: files
+      .filter((name) => name.startsWith("WhatsApp Video") && /\.mp4$/i.test(name))
+      .sort((a, b) => a.localeCompare(b))
+      .map((name) => toMedia(name, "video")),
+  };
+}
 
 export default function Page() {
+  const { images, videos } = getProjectMedia();
+
   return (
-    <div className="bg-white text-black ">
+    <div className="bg-white text-black">
+      <section className="grid gap-8 bg-black px-6 py-14 pt-29 text-white md:px-12 lg:grid-cols-2">
+        <div>
+          <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.35em] text-[#D4AF37]">
+            Prime Build Portfolio
+          </p>
+          <h1 className="max-w-xl text-3xl font-light leading-tight md:text-5xl lg:text-6xl">
+            Take a look at our <br /> recent projects
+          </h1>
+        </div>
 
-      {/* HERO */}
-      <section className="pt-29 grid lg:grid-cols-2 gap-8 px-6 md:px-12 py-14 bg-black text-white">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight max-w-xl">
-          Take a look at our <br /> recent projects
-        </h1>
-
-        <p className="text-gray-400 text-base md:text-lg flex items-end max-w-lg">
-          Explore our latest structural achievements, where modern design meets
-          technical precision and uncompromising quality.
+        <p className="flex max-w-lg items-end text-base text-gray-400 md:text-lg">
+          Explore the latest site photos and videos, where disciplined execution,
+          clean detailing, and professional delivery come together.
         </p>
       </section>
 
-      {/* PROJECTS */}
-      <section className="px-6 md:px-12 py-14 space-y-16">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="group border-b border-gray-300 pb-8"
-          >
-
-            {/* IMAGE */}
-            <div className="overflow-hidden rounded-2xl">
-              <Image
-                src={project.img}
-                alt={project.title}
-                width={1400}
-                height={900}
-                className="w-full h-[320px] md:h-[380px] object-cover transition duration-700 group-hover:scale-105"
-              />
-            </div>
-
-            {/* CONTENT */}
-            <div className="flex flex-col lg:flex-row justify-between gap-6 mt-6">
-              
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-serif font-medium max-w-lg">
-                {project.title}
-              </h2>
-
-              <div className="flex flex-wrap gap-8 text-xs md:text-sm text-gray-600">
-                <div>
-                  <p className="font-semibold text-black">Date</p>
-                  <p>{project.date}</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-black">Location</p>
-                  <p>{project.location}</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-black">Service</p>
-                  <p>{project.service}</p>
-                </div>
-              </div>
-
-            </div>
-
-          </motion.div>
-        ))}
-      </section>
-
+      <ProjectGallery images={images} videos={videos} />
     </div>
-  )
+  );
 }

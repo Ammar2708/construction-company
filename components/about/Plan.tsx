@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { featuredMedia } from "@/lib/featuredMedia";
 
 const steps = [
   {
@@ -67,7 +68,7 @@ const Plan = () => {
             className="lg:col-span-5 relative h-[380px] md:h-[480px] overflow-hidden"
           >
             <Image
-              src="/img7.png"
+              src={featuredMedia.process}
               alt="Our Process"
               fill
               className="object-cover"

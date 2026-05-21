@@ -82,6 +82,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { HiOutlineArrowRight, HiMenuAlt3, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
@@ -115,9 +116,11 @@ const Navbar = () => {
         
         {/* Logo - Responsive height */}
         <Link href="/" className="z-[70] transition-transform active:scale-95">
-          <img 
+          <Image
             src="/logo2.png" 
             alt="Prime Build Logo" 
+            width={180}
+            height={80}
             className="h-8 md:h-10 lg:h-12 w-auto object-contain" 
           />
         </Link>

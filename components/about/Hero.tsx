@@ -112,6 +112,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { featuredMedia } from "@/lib/featuredMedia";
 
 const Hero = () => {
   return (
@@ -127,7 +128,7 @@ const Hero = () => {
           className="relative h-full w-full"
         >
           <Image
-            src="/bg1.png"
+            src={featuredMedia.aboutHero}
             alt="Construction Excellence"
             fill
             priority

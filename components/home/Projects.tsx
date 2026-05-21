@@ -4,6 +4,7 @@ import React from 'react'
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { featuredMedia } from "@/lib/featuredMedia";
 
 const Projects = () => {
   return (
@@ -62,11 +63,11 @@ const Projects = () => {
           className='mt-8 lg:mt-0 lg:absolute left-0 lg:left-40 lg:right-120 lg:mt-20 flex justify-center'
         >
           <Image 
-            src="/img2.png" 
-            alt="project" 
+            src={featuredMedia.projectMain}
+            alt="Featured Prime Build project"
             width={450} 
             height={350} 
-            className='w-full max-w-sm lg:max-w-none'
+            className='w-full max-w-sm lg:max-w-none object-cover'
           />
         </motion.div>
 
@@ -78,9 +79,9 @@ const Projects = () => {
           viewport={{ once: true }}
           className='mt-8 lg:mt-0 lg:absolute flex flex-col sm:flex-row left-0 lg:left-40 lg:mt-130 gap-3 items-center'
         >
-          <Image src="/img1.png" alt="project1" width={250} height={250} className='w-full lg:h-100 lg:w-85 object-cover' />
-          <Image src="/img4.png" alt="project2" width={250} height={250} className='w-full lg:h-100 lg:w-87 object-cover' />
-          <Image src="/img3.png" alt="project3" width={250} height={250} className='w-full lg:h-100 lg:w-87 object-cover' />
+          <Image src={featuredMedia.projectOne} alt="Prime Build project detail" width={250} height={250} className='w-full lg:h-100 lg:w-85 object-cover' />
+          <Image src={featuredMedia.projectTwo} alt="Prime Build project detail" width={250} height={250} className='w-full lg:h-100 lg:w-87 object-cover' />
+          <Image src={featuredMedia.projectThree} alt="Prime Build project detail" width={250} height={250} className='w-full lg:h-100 lg:w-87 object-cover' />
         </motion.div>
 
       </div>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useQuoteModal } from "@/components/context/QuoteModalContext";
+import { featuredMedia } from "@/lib/featuredMedia";
 
 const testimonials = [
   {
@@ -12,7 +13,7 @@ const testimonials = [
       "The attention to structural detail is unparalleled. They elevated the entire architectural vision of the estate.",
     author: "John Carter",
     location: "London, UK",
-    image: "/img1.png",
+    image: featuredMedia.projectOne,
   },
   {
     quote: "Our home design is unique, beautiful and special",
@@ -20,7 +21,7 @@ const testimonials = [
       "Rarely do you find a firm that balances technical engineering with such a refined aesthetic eye.",
     author: "Sophie Moore",
     location: "Manchester, UK",
-    image: "/img2.png",
+    image: featuredMedia.projectMain,
   },
   {
     quote: "Love how our home looks more comfy and modern",
@@ -28,7 +29,7 @@ const testimonials = [
       "Professional, transparent, and precise. They transformed our concept into a legacy property.",
     author: "Matt Cannon",
     location: "Surrey, UK",
-    image: "/img3.png",
+    image: featuredMedia.projectThree,
   },
 ];
 
@@ -121,7 +122,7 @@ const Testimonials = () => {
 
               <p className="text-gray-500 text-sm md:text-base max-w-sm font-light leading-relaxed">
                 Our reputation is built on the word of those we serve. We take
-                pride in the long-standing relationships we've fostered across
+                pride in the long-standing relationships we&apos;ve fostered across
                 the UK.
               </p>
 

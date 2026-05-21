@@ -1,10 +1,15 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 
-const ModalContext = createContext<any>(null);
+type QuoteModalContextValue = {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+};
 
-export const QuoteModalProvider = ({ children }: any) => {
+const ModalContext = createContext<QuoteModalContextValue | null>(null);
+
+export const QuoteModalProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -15,5 +20,11 @@ export const QuoteModalProvider = ({ children }: any) => {
 };
 
 export const useQuoteModal = () => {
-  return useContext(ModalContext);
+  const context = useContext(ModalContext);
+
+  if (!context) {
+    throw new Error("useQuoteModal must be used inside QuoteModalProvider");
+  }
+
+  return context;
 };

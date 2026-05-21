@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   FaFacebookF,
   FaTwitter,
@@ -13,7 +14,6 @@ import {
   HiOutlineLocationMarker,
   HiChevronUp,
 } from "react-icons/hi";
-import { div } from "framer-motion/client";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Column 1 */}
           <div className="flex flex-col gap-8">
             <Link href="/" className="transition-opacity hover:opacity-80 w-fit">
-              <img src="/logo2.png" alt="Prime Build Logo" className="h-10 md:h-12 w-auto" />
+              <Image src="/logo2.png" alt="Prime Build Logo" width={180} height={80} className="h-10 md:h-12 w-auto object-contain" />
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs italic font-light">

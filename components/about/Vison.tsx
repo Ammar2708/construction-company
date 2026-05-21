@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { featuredMedia } from "@/lib/featuredMedia";
 
 const Vision = () => {
   return (
@@ -20,7 +22,7 @@ const Vision = () => {
           >
             <h2 className="w-200 text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight tracking-tight">
               An exceptional quality <br /> 
-              <span className="text-[#D4AF37]">that can't be beaten</span>
+              <span className="text-[#D4AF37]">that can&apos;t be beaten</span>
             </h2>
 
             <p className="text-[#5D575B] text-sm md:text-base leading-relaxed max-w-md font-light">
@@ -41,10 +43,11 @@ const Vision = () => {
             transition={{ duration: 0.8 }}
             className="relative h-[320px] md:h-[420px] w-full"
           >
-            <img 
-              src="/img5.png" 
+            <Image
+              src={featuredMedia.visionQuality}
               alt="Quality Craftsmanship" 
-              className="w-full h-full object-cover rounded-2xl shadow-xl" 
+              fill
+              className="object-cover rounded-2xl shadow-xl" 
             />
           </motion.div>
 
@@ -60,10 +63,11 @@ const Vision = () => {
             transition={{ duration: 0.8 }}
             className="relative h-[320px] md:h-[420px] w-full order-2 lg:order-1"
           >
-            <img 
-              src="/img6.png" 
+            <Image
+              src={featuredMedia.visionMission}
               alt="Our Mission" 
-              className="w-full h-full object-cover rounded-2xl shadow-xl" 
+              fill
+              className="object-cover rounded-2xl shadow-xl" 
             />
           </motion.div>
 

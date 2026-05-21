@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { featuredMedia } from "@/lib/featuredMedia";
 
 const Experience = () => {
   return (
@@ -50,14 +51,14 @@ const Experience = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
-        className="mt-8 lg:mt-0 lg:absolute lg:right-0 lg:left-70 lg:mt-20"
+        className="mt-8 lg:mt-0 lg:absolute lg:right-0 lg:left-90 lg:mt-20"
       >
         <Image
-          src="/bg2.png"
-          alt="experience"
+          src={featuredMedia.experience}
+          alt="Completed Prime Build project"
           width={500}
           height={500}
-          className="w-full lg:w-auto lg:h-110"
+          className="w-full lg:w-75 lg:h-110 object-cover"
         />
       </motion.div>
 

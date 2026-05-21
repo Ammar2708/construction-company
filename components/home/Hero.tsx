@@ -139,6 +139,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { featuredMedia } from "@/lib/featuredMedia";
 
 const Hero = () => {
   return (
@@ -148,8 +149,8 @@ const Hero = () => {
       {/* --- BACKGROUND --- */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bg4.png" 
-          alt="Luxury Architecture"
+          src={featuredMedia.hero}
+          alt="Prime Build project site"
           fill
           priority
           className="object-cover opacity-60"
@@ -199,7 +200,7 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="mt-8 flex flex-col md:flex-row md:items-center gap-8 md:gap-16"
           >
-            <a href="/projects" className="group shrink-0">
+            <a href="/project" className="group shrink-0">
               <div className="relative border border-white/20 px-8 py-4 overflow-hidden transition-all duration-300 group-hover:border-[#D4AF37]">
                 <span className="relative z-10 text-white text-[10px] font-bold uppercase tracking-[0.3em]">
                   View Projects

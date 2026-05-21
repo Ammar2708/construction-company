@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useQuoteModal } from "@/components/context/QuoteModalContext";
+import { featuredMedia } from "@/lib/featuredMedia";
 
 const Work = () => {
   const { setOpen } = useQuoteModal();
@@ -13,7 +14,7 @@ const Work = () => {
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/bg3.png')` }}
+        style={{ backgroundImage: `url("${featuredMedia.workBackdrop}")` }}
       >
         <div className="absolute inset-0 bg-black/50" />
       </div>
