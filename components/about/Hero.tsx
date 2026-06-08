@@ -188,10 +188,10 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="max-w-sm"
             >
-              <p className="font-serif italic text-2xl md:text-3xl text-white/90 mb-4 lowercase">
+              <p className="font-serif italic text-2xl md:text-[31px] text-white/90 mb-4 lowercase">
                 with precision and safety
               </p>
-              <p className="text-gray-400 text-xs md:text-sm leading-relaxed border-l border-white/20 pl-4">
+              <p className="text-gray-400 text-[13px] md:text-[15px] font-semibold leading-relaxed border-l border-white/20 pl-4">
                 Delivering high-quality construction solutions across industrial, 
                 civil, and infrastructure projects.
               </p>
@@ -236,13 +236,13 @@ const Hero = () => {
         transition={{ delay: 1.2 }}
         className="absolute bottom-10 left-6 md:left-24 flex gap-8 text-[9px] text-white/40 uppercase tracking-[0.2em]"
       >
-        <span className="flex items-center gap-2">
-          <span className="text-[#D4AF37]">01</span> 10+ Projects
+        <span className="flex items-center gap-2 text-[#b5b5b1]">
+          <span className="text-[#D4AF37]">01</span> 100+ Projects
         </span>
-        <span className="flex items-center gap-2">
+        <span className="flex items-center gap-2 text-[#b5b5b1]">
           <span className="text-[#D4AF37]">02</span> Skilled Engineers
         </span>
-        <span className="flex items-center gap-2">
+        <span className="flex items-center gap-2 text-[#b5b5b1]">
           <span className="text-[#D4AF37]">03</span> On-Time Delivery
         </span>
       </motion.div>

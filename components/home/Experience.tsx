@@ -7,7 +7,7 @@ import { featuredMedia } from "@/lib/featuredMedia";
 
 const Experience = () => {
   return (
-    <div className="bg-white pt-6 pb-6  px-4 lg:pt-10 lg:pb-10 lg:pr-20 lg:flex relative overflow-hidden ">
+    <div className="bg-white text-[#171717] pt-6 pb-6  px-4 lg:pt-10 lg:pb-10 lg:pr-20 lg:flex relative overflow-hidden ">
       
       {/* Stats Box */}
       <motion.div
@@ -15,31 +15,31 @@ const Experience = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="bg-[#F5F6F8] w-full lg:w-110 h-auto lg:h-150 pt-6 lg:pt-14 lg:pr-40"
+        className="bg-[#F5F6F8] text-[#171717] w-full lg:w-110 h-auto lg:h-150 pt-6 lg:pt-14 lg:pr-40"
       >
         <div className="border-b p-4 lg:p-10 lg:pl-12 border-[#c9c5c6]">
-          <p className="text-3xl lg:text-5xl">
+          <p className="text-3xl lg:text-5xl font-medium text-[#151515]">
             340<span className="text-2xl lg:text-4xl font-serif">+</span>
           </p>
-          <p className="text-sm lg:text-base text-[#797779]">
+          <p className="text-sm lg:text-base font-medium text-[#5f5d60]">
             Successful Projects
           </p>
         </div>
 
         <div className="border-b p-4 lg:p-10 border-[#c9c5c6]">
-          <p className="text-3xl lg:text-5xl">
+          <p className="text-3xl lg:text-5xl font-medium text-[#151515]">
             50<span className="text-2xl lg:text-4xl font-serif">+</span>
           </p>
-          <p className="text-sm lg:text-base text-[#797779]">
+          <p className="text-sm lg:text-base font-medium text-[#5f5d60]">
             Team members
           </p>
         </div>
 
         <div className="p-4 lg:p-10">
-          <p className="text-3xl lg:text-5xl">
+          <p className="text-3xl lg:text-5xl font-medium text-[#151515]">
             340<span className="text-2xl lg:text-4xl font-serif">+</span>
           </p>
-          <p className="text-sm lg:text-base text-[#797779]">
+          <p className="text-sm lg:text-base font-medium text-[#5f5d60]">
             Happy clients
           </p>
         </div>
