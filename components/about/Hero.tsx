@@ -129,7 +129,7 @@ const Hero = () => {
         >
           <Image
             src={featuredMedia.aboutHero}
-            alt="Construction Excellence"
+            alt="Scaffolded building project in progress"
             fill
             priority
             className="object-cover object-right lg:object-center opacity-50"

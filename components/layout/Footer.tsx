@@ -115,15 +115,15 @@ const Footer = () => {
               <li className="flex items-start gap-4 text-gray-400 group">
                 <HiOutlineLocationMarker className="text-[#D4AF37] mt-1 shrink-0" size={20} />
                 <span className="text-sm leading-relaxed group-hover:text-white transition-colors">
-                  123 Business Way, Canary Wharf<br />
-                  London, E14 5AB
+                  46 Rudloe Road<br />
+                  SW12 0DS
                 </span>
               </li>
 
               <li className="flex items-center gap-4 text-gray-400 group">
                 <HiOutlinePhone className="text-[#D4AF37] shrink-0" size={20} />
-                <a href="tel:+442012345678" className="text-sm group-hover:text-white transition-colors">
-                  +44 20 1234 5678
+                <a href="tel:07472137237" className="text-sm group-hover:text-white transition-colors">
+                  07472137237
                 </a>
               </li>
 

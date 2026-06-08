@@ -69,7 +69,7 @@ const Plan = () => {
           >
             <Image
               src={featuredMedia.process}
-              alt="Our Process"
+              alt="Roof construction work in progress"
               fill
               className="object-cover"
             />

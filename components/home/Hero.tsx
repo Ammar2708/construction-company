@@ -209,7 +209,7 @@ const Hero = () => {
               </div>
             </a>
 
-            <p className="max-w-xs text-gray-400 text-xs md:text-sm font-light leading-relaxed border-l border-[#D4AF37]/50 pl-4">
+            <p className="max-w-xs text-gray-400 text-xs md:text-[16px]  font-semibold leading-relaxed border-l border-[#D4AF37]/50 pl-4">
               Crafting architectural legacies through 
               <span className="text-white"> precision engineering</span> and 
               <span className="text-white"> bespoke design</span> across the UK.

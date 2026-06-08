@@ -47,7 +47,7 @@ const Work = () => {
             </button>
 
             {/* ✅ CALL BUTTON */}
-            <a href="tel:+14149036781">
+            <a href="tel:07472137237">
               <button className="cursor-pointer border border-white/40 text-white px-6 py-3 rounded-full font-medium text-base hover:bg-white/10 min-w-[150px]">
                 Call us
               </button>

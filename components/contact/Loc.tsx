@@ -10,7 +10,7 @@ const Loc = () => {
         {/* Header */}
         <div className="mb-10">
           <h2 className="text-2xl md:text-5xl font-semibold tracking-tight  leading-tight">
-            Visit our flagship office <br /> in Los Angeles
+            Visit our office <br /> on Rudloe Road
           </h2>
         </div>
 
@@ -20,7 +20,7 @@ const Loc = () => {
           <div className="lg:col-span-7 relative z-10 min-h-[300px] lg:min-h-[450px] shadow-xl">
             <iframe
               title="Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.733248043701!2d-118.2436849!3d34.0522342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c648fa1d4803%3A0xdec270186e2ebdc1!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+              src="https://www.google.com/maps?q=46%20Rudloe%20Road%2C%20SW12%200DS&output=embed"
               className="absolute inset-0 w-full h-full grayscale contrast-110 brightness-105 hover:grayscale-0 transition-all duration-700 border-0"
               allowFullScreen
               loading="lazy"
@@ -38,12 +38,11 @@ const Loc = () => {
               {/* Location Info */}
               <div className="space-y-4">
                 <h3 className="text-xl md:text-2xl font-medium tracking-tight">
-                  Los Angeles, CA
+                  46 Rudloe Road
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed max-w-sm font-light">
-                  Our West Coast headquarters is located in the heart of the design district. 
-                  We host our primary architectural studio and client consultation lounge here, 
-                  focusing on sustainable urban development.
+                  Visit us at our London office for project discussions,
+                  consultations, and detailed service inquiries.
                 </p>
               </div>
 
@@ -64,7 +63,7 @@ const Loc = () => {
                     Phone number
                   </p>
                   <p className="text-xs md:text-sm font-medium">
-                    +1 (414) 903 - 6781
+                    07472137237
                   </p>
                 </div>
 
@@ -73,8 +72,8 @@ const Loc = () => {
                     Studio Address
                   </p>
                   <p className="text-xs md:text-sm font-medium leading-relaxed">
-                    123 Design District, Suite 400 <br />
-                    Los Angeles, California 90012
+                    46 Rudloe Road <br />
+                    SW12 0DS
                   </p>
                 </div>
 

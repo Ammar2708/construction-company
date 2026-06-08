@@ -45,7 +45,7 @@ const Vision = () => {
           >
             <Image
               src={featuredMedia.visionQuality}
-              alt="Quality Craftsmanship" 
+              alt="Finished marble bathroom craftsmanship"
               fill
               className="object-cover rounded-2xl shadow-xl" 
             />
@@ -65,7 +65,7 @@ const Vision = () => {
           >
             <Image
               src={featuredMedia.visionMission}
-              alt="Our Mission" 
+              alt="Completed outdoor garden project"
               fill
               className="object-cover rounded-2xl shadow-xl" 
             />

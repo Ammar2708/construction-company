@@ -19,7 +19,8 @@ const Hero = () => {
 
   const contactInfo = {
     email: "info@construktion.com",
-    phone: "+1 (414) 903-6781",
+    phone: "07472137237",
+    address: "46 Rudloe Road, SW12 0DS",
     socials: [
       { Icon: FaFacebookF, href: "#" },
       { Icon: FaPinterestP, href: "#" },
@@ -111,6 +112,15 @@ const Hero = () => {
                     >
                       {contactInfo.phone}
                     </a>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] uppercase text-zinc-500 block mb-2">
+                      Address
+                    </span>
+                    <p className="text-lg text-white">
+                      {contactInfo.address}
+                    </p>
                   </div>
                 </div>
               </div>
